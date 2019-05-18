@@ -1,0 +1,14 @@
+.app-header {
+  padding: 10px;
+
+  background-color: #f7ac3b;
+
+  &__title {
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 2.8rem;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,25 @@
+//------------------------------------------------------------------------------
+//   Import all styles
+//-----------------------------------------------------------------------------
+
+//------- BASE
+@import "base/all";
+@import "mixins/all";
+@import "settings/all";
+
+//------- TRUMPS
+@import "trumps/all";
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1070px;
+
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.app-paragraph {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
