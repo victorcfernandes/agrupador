@@ -18,12 +18,9 @@ const GeoButton = () => {
   };
 
   return (
-    <>
-      <button className="geo-button" onClick={geolocate}>
-        Ativar Geolocalização
-      </button>
-      <p>{location.lng}</p>
-    </>
+    <button className="geo-button" onClick={geolocate}>
+      Ativar Geolocalização
+    </button>
   );
 };
 

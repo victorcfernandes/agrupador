@@ -30,6 +30,7 @@ export const getPositionByGeolocation = () =>
   );
 
 export const getPosition = async () =>
+  // if browser does not support geolocation api fallback to geoIp service
   "geolocation" in navigator ? getPositionByGeolocation() : getPositionByGeoIP();
 
 export default {

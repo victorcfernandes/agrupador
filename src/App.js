@@ -1,15 +1,17 @@
 import React from "react";
+import { Router } from "@reach/router";
 
 import "./styles/styles.scss";
 
 import Header from "./components/header/Header";
 
 import HomePage from "./pages/HomePage";
+import AddGroupPage from "./pages/AddGroupPage";
 
 import { StateProvider } from "./service";
 
 const initialState = {
-  location: { lat: null, lng: null }
+  location: null
 };
 
 const reducer = (state, action) => {
@@ -29,7 +31,10 @@ const App = () => (
   <div className="App">
     <Header />
     <StateProvider initialState={initialState} reducer={reducer}>
-      <HomePage />
+      <Router>
+        <HomePage path="/" />
+        <AddGroupPage path="/adicionar" />
+      </Router>
     </StateProvider>
   </div>
 );

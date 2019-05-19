@@ -1,0 +1,64 @@
+.input-group {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  height: auto;
+  width: 90%;
+  max-width: 500px;
+  margin: 15px auto;
+
+  &__input {
+    height: 40px;
+    width: 100%;
+    padding: 12px 0 0 10px;
+    margin: 5px 0;
+
+    background-color: #f1f1f1;
+    border: 1px solid #dadada;
+    border-radius: 0;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    &--textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    &::placeholder {
+      color: #a1a1a1;
+    }
+
+    &:focus ~ .input-group__label--animated,
+    &:valid ~ .input-group__label--animated {
+      top: 8px;
+
+      font-size: 10px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #a1a1a1;
+
+    transition: top 200ms ease-in-out;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -8px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #b12121;
+    white-space: nowrap;
+  }
+}
