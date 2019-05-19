@@ -19,7 +19,16 @@
   padding: 10px 15px;
 }
 
-.app-paragraph {
-  font-size: 1.6rem;
+.app-section-title {
+  margin: 15px 0;
+
   line-height: 1.3;
+  font-size: 2rem;
+}
+
+.app-paragraph {
+  margin: 10px 0;
+
+  font-size: 1.6rem;
+  line-height: 1.45;
 }
