@@ -8,7 +8,8 @@ import WelcomeGateway from "./components/WelcomeGateway/WelcomeGateway";
 import { StateProvider } from "./service";
 
 const initialState = {
-  location: null
+  location: null,
+  results: null
 };
 
 const reducer = (state, action) => {
@@ -17,6 +18,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         location: action.location
+      };
+
+    case "UPDATE_RESULTS":
+      return {
+        ...state,
+        results: action.data
       };
 
     default:

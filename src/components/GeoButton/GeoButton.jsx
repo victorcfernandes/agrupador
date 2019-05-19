@@ -4,7 +4,7 @@ import "./styles.scss";
 
 import { useStateValue } from "../../service";
 
-import { getPosition } from "./geolocation";
+import { getPosition } from "../../service/geolocation";
 
 const GeoButton = () => {
   const [{ location }, dispatch] = useStateValue();
