@@ -6,15 +6,28 @@ import InputGroup from "../InputGroup/InputGroup";
 
 import validation from "./validation";
 
+const { REACT_APP_API_URL } = process.env;
+
 const AddGroupForm = ({ location }) => (
   <Formik
-    initialValues={{ name: "", link: "", description: "", location }}
+    initialValues={{ ...location, name: "", link: "", description: "" }}
     validationSchema={validation}
-    onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-      }, 400);
+    onSubmit={async (values, { setSubmitting }) => {
+      const fetchParams = {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: { "content-type": "application/json" }
+      };
+
+      const response = await fetch(`${REACT_APP_API_URL}/groups/new`, fetchParams);
+
+      const data = await response.json();
+
+      console.log("====================================");
+      console.log(data);
+      console.log("====================================");
+
+      setSubmitting(false);
     }}>
     {({ isSubmitting }) => (
       <Form>
