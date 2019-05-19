@@ -43,4 +43,8 @@
   color: #fff;
 
   font-size: 1.7rem;
+
+  &:disabled {
+    opacity: 0.6;
+  }
 }

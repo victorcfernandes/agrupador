@@ -1,12 +1,9 @@
 import React from "react";
-import { Router } from "@reach/router";
 
 import "./styles/styles.scss";
 
 import Header from "./components/header/Header";
-
-import HomePage from "./pages/HomePage";
-import AddGroupPage from "./pages/AddGroupPage";
+import WelcomeGateway from "./components/WelcomeGateway/WelcomeGateway";
 
 import { StateProvider } from "./service";
 
@@ -31,10 +28,7 @@ const App = () => (
   <div className="App">
     <Header />
     <StateProvider initialState={initialState} reducer={reducer}>
-      <Router>
-        <HomePage path="/" />
-        <AddGroupPage path="/adicionar" />
-      </Router>
+      <WelcomeGateway />
     </StateProvider>
   </div>
 );
