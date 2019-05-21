@@ -3,14 +3,17 @@ import PropTypes from "prop-types";
 
 import "./styles.scss";
 
-const ResultItem = ({ id, name, description, link }) => {
+const ResultItem = ({ distance, name, description, link }) => {
   const [active, setActive] = useState(false);
 
   return (
     <li className="result-item">
-      <h3 className="result-item__name" onClick={() => setActive(!active)}>
-        {name}
-      </h3>
+      <div className="result-item__wrapper">
+        <h3 className="result-item__name" onClick={() => setActive(!active)}>
+          {name}
+        </h3>
+        <span className="result-item__distance">{Number.parseFloat(distance).toFixed(1)} Km</span>
+      </div>
       <div
         className={`result-item__description ${active ? "result-item__description--active" : ""}`}>
         {description}

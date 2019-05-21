@@ -16,7 +16,7 @@ const HomePage = () => {
 
       dispatch({
         type: "UPDATE_RESULTS",
-        data
+        results: data
       });
     };
 
@@ -27,7 +27,11 @@ const HomePage = () => {
     <section className="container">
       <AddGroupBtn />
       <h2 className="app-section-title">Grupos próximos</h2>
-      {results && <ResultsList results={results.data} />}
+      <p className="app-paragraph">
+        Esses são os grupos mais próximos de você em um raio de até 1Km. Clique num grupo para saber
+        mais.
+      </p>
+      {results && <ResultsList results={results.data} resultCount={results.count} />}
     </section>
   );
 };

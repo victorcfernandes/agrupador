@@ -1,14 +1,29 @@
 .result-item {
+  position: relative;
+
   margin: 20px 0;
 
   background-color: #dbd5d5;
 
   font-size: 1.5rem;
 
-  &__name {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
     padding: 15px 10px;
+  }
+
+  &__name {
+    width: 80%;
 
     font-size: 1.6rem;
+  }
+
+  &__distance {
+    width: 20%;
+
+    font-size: 1.3rem;
   }
 
   &__description {

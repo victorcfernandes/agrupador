@@ -9,7 +9,7 @@ import { StateProvider } from "./service";
 
 const initialState = {
   location: null,
-  results: null
+  results: { count: 0, data: [] }
 };
 
 const reducer = (state, action) => {
@@ -23,7 +23,10 @@ const reducer = (state, action) => {
     case "UPDATE_RESULTS":
       return {
         ...state,
-        results: action.data
+        results: {
+          count: action.results.count,
+          data: [...state.results.data, ...action.results.data]
+        }
       };
 
     default:

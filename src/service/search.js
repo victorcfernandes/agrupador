@@ -2,7 +2,9 @@ import queryString from "query-string";
 
 const { REACT_APP_API_URL } = process.env;
 
-const getGroups = async ({ limit = 10, offset = 0, lat, lng, radius = 1 }) => {
+const getGroups = async ({ limit = 10, page = 1, lat, lng, radius = 1 }) => {
+  const offset = (page - 1) * limit;
+
   const params = queryString.stringify({
     limit,
     offset,

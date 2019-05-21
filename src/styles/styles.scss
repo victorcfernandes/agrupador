@@ -30,6 +30,8 @@
 
   font-size: 1.6rem;
   line-height: 1.45;
+  word-spacing: 1px;
+  letter-spacing: 0.1px;
 }
 
 .app-btn {
@@ -47,4 +49,11 @@
   &:disabled {
     opacity: 0.6;
   }
+}
+
+.app-link {
+  color: gray;
+  text-decoration: underline;
+
+  font-size: 1.5rem;
 }

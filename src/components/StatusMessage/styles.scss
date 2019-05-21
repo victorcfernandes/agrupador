@@ -1,0 +1,11 @@
+.status-message {
+  font-size: 1.6rem;
+
+  &--error {
+    color: red;
+  }
+
+  &--success {
+    color: green;
+  }
+}
